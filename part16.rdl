@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <SharedDataSet>
+        <SharedDataSetReference>dtsFilms</SharedDataSetReference>
+      </SharedDataSet>
+      <Fields>
+        <Field Name="DirectorName">
+          <DataField>DirectorName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FilmName">
+          <DataField>FilmName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CountryName">
+          <DataField>CountryName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FilmReleaseDate">
+          <DataField>FilmReleaseDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="FilmID">
+          <DataField>FilmID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FilmBoxOfficeDollars">
+          <DataField>FilmBoxOfficeDollars</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FilmBudgetDollars">
+          <DataField>FilmBudgetDollars</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="LanguageName">
+          <DataField>LanguageName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StudioName">
+          <DataField>StudioName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CertificateName">
+          <DataField>CertificateName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FilmRunTimeMinutes">
+          <DataField>FilmRunTimeMinutes</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FilmOscarWins">
+          <DataField>FilmOscarWins</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="FilmCertificateID">
+          <DataField>FilmCertificateID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>6.89439in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>3.64026in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.85966in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle4">
+                          <ReportItems>
+                            <Textbox Name="FilmName1">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!FilmName.Value</Value>
+                                      <Style>
+                                        <FontSize>22pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>FilmName1</rd:DefaultName>
+                              <Top>0.23527in</Top>
+                              <Left>0.37375in</Left>
+                              <Height>0.5625in</Height>
+                              <Width>9.76114in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>PaleTurquoise</BackgroundColor>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                          </Style>
+                        </Rectangle>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>2.47917in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle1">
+                          <ReportItems>
+                            <Textbox Name="FilmReleaseDate">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!FilmReleaseDate.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>FilmReleaseDate</rd:DefaultName>
+                              <Top>0.68278in</Top>
+                              <Left>0.37375in</Left>
+                              <Height>0.25in</Height>
+                              <Width>2.60417in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="FilmRunTimeMinutes">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!FilmRunTimeMinutes.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>FilmRunTimeMinutes</rd:DefaultName>
+                              <Top>1.23486in</Top>
+                              <Left>0.37375in</Left>
+                              <Height>0.25in</Height>
+                              <Width>2.60417in</Width>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Rectangle Name="Rectangle3">
+                              <ReportItems>
+                                <Textbox Name="FilmBudgetDollars">
+                                  <CanGrow>true</CanGrow>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>=Fields!FilmBudgetDollars.Value</Value>
+                                          <Style />
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style />
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <rd:DefaultName>FilmBudgetDollars</rd:DefaultName>
+                                  <Top>0.5925in</Top>
+                                  <Left>1.49944in</Left>
+                                  <Height>0.25in</Height>
+                                  <Width>1.44444in</Width>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>HotPink</BackgroundColor>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                </Textbox>
+                                <Textbox Name="FilmBoxOfficeDollars">
+                                  <CanGrow>true</CanGrow>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>=Fields!FilmBoxOfficeDollars.Value</Value>
+                                          <Style />
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style />
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <rd:DefaultName>FilmBoxOfficeDollars</rd:DefaultName>
+                                  <Top>0.91194in</Top>
+                                  <Left>1.48556in</Left>
+                                  <Height>0.25in</Height>
+                                  <Width>1.45833in</Width>
+                                  <ZIndex>1</ZIndex>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>HotPink</BackgroundColor>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                </Textbox>
+                                <Textbox Name="Textbox6">
+                                  <CanGrow>true</CanGrow>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>Financial Data</Value>
+                                          <Style>
+                                            <TextDecoration>Underline</TextDecoration>
+                                            <Color>White</Color>
+                                          </Style>
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style />
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <rd:DefaultName>Textbox6</rd:DefaultName>
+                                  <Top>0.22792in</Top>
+                                  <Left>0.29806in</Left>
+                                  <Height>0.25in</Height>
+                                  <Width>2.64583in</Width>
+                                  <ZIndex>2</ZIndex>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>BlueViolet</BackgroundColor>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                </Textbox>
+                                <Textbox Name="Textbox7">
+                                  <CanGrow>true</CanGrow>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>Budget</Value>
+                                          <Style />
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style />
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <rd:DefaultName>Textbox7</rd:DefaultName>
+                                  <Top>0.5925in</Top>
+                                  <Left>0.29806in</Left>
+                                  <Height>0.25in</Height>
+                                  <Width>1in</Width>
+                                  <ZIndex>3</ZIndex>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                </Textbox>
+                                <Textbox Name="Textbox8">
+                                  <CanGrow>true</CanGrow>
+                                  <KeepTogether>true</KeepTogether>
+                                  <Paragraphs>
+                                    <Paragraph>
+                                      <TextRuns>
+                                        <TextRun>
+                                          <Value>Box Office</Value>
+                                          <Style />
+                                        </TextRun>
+                                      </TextRuns>
+                                      <Style />
+                                    </Paragraph>
+                                  </Paragraphs>
+                                  <rd:DefaultName>Textbox8</rd:DefaultName>
+                                  <Top>0.91194in</Top>
+                                  <Left>0.32167in</Left>
+                                  <Height>0.25in</Height>
+                                  <Width>1in</Width>
+                                  <ZIndex>4</ZIndex>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <PaddingLeft>2pt</PaddingLeft>
+                                    <PaddingRight>2pt</PaddingRight>
+                                    <PaddingTop>2pt</PaddingTop>
+                                    <PaddingBottom>2pt</PaddingBottom>
+                                  </Style>
+                                </Textbox>
+                              </ReportItems>
+                              <KeepTogether>true</KeepTogether>
+                              <Top>0.32292in</Top>
+                              <Left>3.28125in</Left>
+                              <Height>1.39458in</Height>
+                              <Width>3.21875in</Width>
+                              <ZIndex>2</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <BackgroundColor>LightBlue</BackgroundColor>
+                              </Style>
+                            </Rectangle>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle7">
+                          <ReportItems>
+                            <Textbox Name="FilmOscarWins">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!FilmOscarWins.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>FilmOscarWins</rd:DefaultName>
+                              <Top>0.91542in</Top>
+                              <Left>0.81889in</Left>
+                              <Height>0.25in</Height>
+                              <Width>1in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="CertificateName">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!CertificateName.Value</Value>
+                                      <Style />
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style />
+                                </Paragraph>
+                              </Paragraphs>
+                              <rd:DefaultName>CertificateName</rd:DefaultName>
+                              <Top>0.60986in</Top>
+                              <Left>0.81889in</Left>
+                              <Height>0.25in</Height>
+                              <Width>1in</Width>
+                              <ZIndex>1</ZIndex>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                        <rd:Selected>true</rd:Selected>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>1in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Rectangle8">
+                          <ReportItems>
+                            <Rectangle Name="Rectangle9">
+                              <ReportItems>
+                                <GaugePanel Name="GaugePanel1">
+                                  <LinearGauges>
+                                    <LinearGauge Name="LinearGauge1">
+                                      <GaugeScales>
+                                        <LinearScale Name="LinearScale1">
+                                          <GaugePointers>
+                                            <LinearPointer Name="LinearPointer1">
+                                              <Type>Bar</Type>
+                                              <Thermometer>
+                                                <Style />
+                                              </Thermometer>
+                                              <Style>
+                                                <Border>
+                                                  <Style>None</Style>
+                                                </Border>
+                                                <BackgroundColor>#01b8aa</BackgroundColor>
+                                                <BackgroundGradientType>None</BackgroundGradientType>
+                                                <BackgroundGradientEndColor>Orange</BackgroundGradientEndColor>
+                                                <BackgroundHatchType>None</BackgroundHatchType>
+                                                <ShadowOffset>0pt</ShadowOffset>
+                                              </Style>
+                                              <GaugeInputValue>
+                                                <Value>35</Value>
+                                                <Multiplier>1</Multiplier>
+                                              </GaugeInputValue>
+                                              <PointerImage>
+                                                <OffsetX>0pt</OffsetX>
+                                                <OffsetY>0pt</OffsetY>
+                                                <Source>External</Source>
+                                                <Value />
+                                              </PointerImage>
+                                              <MarkerLength>25</MarkerLength>
+                                              <MarkerStyle>Wedge</MarkerStyle>
+                                              <Placement>Cross</Placement>
+                                              <Width>30</Width>
+                                            </LinearPointer>
+                                          </GaugePointers>
+                                          <Style>
+                                            <Border>
+                                              <Style>None</Style>
+                                            </Border>
+                                            <BackgroundColor>LightGrey</BackgroundColor>
+                                            <BackgroundGradientType>None</BackgroundGradientType>
+                                            <BackgroundGradientEndColor>White</BackgroundGradientEndColor>
+                                            <BackgroundHatchType>None</BackgroundHatchType>
+                                            <ShadowOffset>0pt</ShadowOffset>
+                                          </Style>
+                                          <Interval>20</Interval>
+                                          <IntervalOffset>NaN</IntervalOffset>
+                                          <MaximumValue>
+                                            <Value>250</Value>
+                                            <Multiplier>1</Multiplier>
+                                          </MaximumValue>
+                                          <MinimumValue>
+                                            <Value>0</Value>
+                                            <Multiplier>1</Multiplier>
+                                          </MinimumValue>
+                                          <GaugeMajorTickMarks>
+                                            <Interval>NaN</Interval>
+                                            <IntervalOffset>NaN</IntervalOffset>
+                                            <Style>
+                                              <Border>
+                                                <Color>DimGray</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <BackgroundColor>DimGray</BackgroundColor>
+                                            </Style>
+                                            <Placement>Cross</Placement>
+                                            <TickMarkImage>
+                                              <Source>External</Source>
+                                              <Value />
+                                            </TickMarkImage>
+                                            <Length>15</Length>
+                                            <Width>2</Width>
+                                            <Hidden>true</Hidden>
+                                          </GaugeMajorTickMarks>
+                                          <GaugeMinorTickMarks>
+                                            <Interval>NaN</Interval>
+                                            <IntervalOffset>NaN</IntervalOffset>
+                                            <Style>
+                                              <Border>
+                                                <Color>DimGray</Color>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <BackgroundColor>DimGray</BackgroundColor>
+                                            </Style>
+                                            <Placement>Cross</Placement>
+                                            <TickMarkImage>
+                                              <Source>External</Source>
+                                              <Value />
+                                            </TickMarkImage>
+                                            <Length>9</Length>
+                                            <Width>1</Width>
+                                            <Hidden>true</Hidden>
+                                          </GaugeMinorTickMarks>
+                                          <MaximumPin>
+                                            <PinLabel>
+                                              <Style>
+                                                <FontSize>12pt</FontSize>
+                                              </Style>
+                                              <DistanceFromScale>0</DistanceFromScale>
+                                            </PinLabel>
+                                            <Style>
+                                              <Border>
+                                                <Color>DimGray</Color>
+                                                <Style>Solid</Style>
+                                              </Border>
+                                              <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                            </Style>
+                                            <Placement>Cross</Placement>
+                                            <TickMarkImage>
+                                              <Source>External</Source>
+                                              <Value />
+                                            </TickMarkImage>
+                                            <Length>6</Length>
+                                            <Width>6</Width>
+                                            <Shape>Circle</Shape>
+                                          </MaximumPin>
+                                          <MinimumPin>
+                                            <PinLabel>
+                                              <Style>
+                                                <FontSize>12pt</FontSize>
+                                              </Style>
+                                              <DistanceFromScale>0</DistanceFromScale>
+                                            </PinLabel>
+                                            <Style>
+                                              <Border>
+                                                <Color>DimGray</Color>
+                                                <Style>Solid</Style>
+                                              </Border>
+                                              <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                            </Style>
+                                            <Placement>Cross</Placement>
+                                            <TickMarkImage>
+                                              <Source>External</Source>
+                                              <Value />
+                                            </TickMarkImage>
+                                            <Length>6</Length>
+                                            <Width>6</Width>
+                                            <Shape>Circle</Shape>
+                                          </MinimumPin>
+                                          <ScaleLabels>
+                                            <Style>
+                                              <FontSize>14pt</FontSize>
+                                              <Color>#404040</Color>
+                                            </Style>
+                                            <Interval>NaN</Interval>
+                                            <IntervalOffset>NaN</IntervalOffset>
+                                            <Placement>Outside</Placement>
+                                            <ShowEndLabels>true</ShowEndLabels>
+                                            <UseFontPercent>true</UseFontPercent>
+                                          </ScaleLabels>
+                                          <TickMarksOnTop>true</TickMarksOnTop>
+                                          <Width>30</Width>
+                                        </LinearScale>
+                                      </GaugeScales>
+                                      <BackFrame>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                          <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                          <BackgroundGradientType>HorizontalCenter</BackgroundGradientType>
+                                          <BackgroundGradientEndColor>DarkGray</BackgroundGradientEndColor>
+                                          <BackgroundHatchType>None</BackgroundHatchType>
+                                          <ShadowOffset>0pt</ShadowOffset>
+                                        </Style>
+                                        <FrameShape>RoundedRectangular</FrameShape>
+                                        <FrameBackground>
+                                          <Style>
+                                            <BackgroundColor>Gainsboro</BackgroundColor>
+                                            <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                            <BackgroundGradientEndColor>WhiteSmoke</BackgroundGradientEndColor>
+                                            <BackgroundHatchType>None</BackgroundHatchType>
+                                          </Style>
+                                        </FrameBackground>
+                                        <FrameImage>
+                                          <Source>External</Source>
+                                          <Value />
+                                        </FrameImage>
+                                      </BackFrame>
+                                      <ClipContent>true</ClipContent>
+                                      <TopImage>
+                                        <Source>External</Source>
+                                        <Value />
+                                      </TopImage>
+                                      <AspectRatio>NaN</AspectRatio>
+                                      <Height>100</Height>
+                                      <Width>100</Width>
+                                    </LinearGauge>
+                                  </LinearGauges>
+                                  <AutoLayout>true</AutoLayout>
+                                  <BackFrame>
+                                    <Style>
+                                      <Border>
+                                        <Style>None</Style>
+                                      </Border>
+                                      <BackgroundColor>Gainsboro</BackgroundColor>
+                                      <BackgroundGradientType>None</BackgroundGradientType>
+                                      <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                      <BackgroundHatchType>None</BackgroundHatchType>
+                                      <ShadowOffset>0pt</ShadowOffset>
+                                    </Style>
+                                    <FrameBackground>
+                                      <Style>
+                                        <BackgroundColor>Silver</BackgroundColor>
+                                        <BackgroundGradientType>DiagonalLeft</BackgroundGradientType>
+                                        <BackgroundGradientEndColor>Gray</BackgroundGradientEndColor>
+                                        <BackgroundHatchType>None</BackgroundHatchType>
+                                      </Style>
+                                    </FrameBackground>
+                                    <FrameImage>
+                                      <Source>External</Source>
+                                      <Value />
+                                    </FrameImage>
+                                  </BackFrame>
+                                  <TopImage>
+                                    <Source>External</Source>
+                                    <Value />
+                                  </TopImage>
+                                  <DataSetName>DataSet1</DataSetName>
+                                  <Left>0.37375in</Left>
+                                  <Height>0.8in</Height>
+                                  <Width>9.76114in</Width>
+                                  <Style>
+                                    <Border>
+                                      <Style>None</Style>
+                                    </Border>
+                                    <BackgroundColor>White</BackgroundColor>
+                                  </Style>
+                                </GaugePanel>
+                              </ReportItems>
+                              <KeepTogether>true</KeepTogether>
+                              <Height>1in</Height>
+                              <Width>10.53465in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Rectangle>
+                          </ReportItems>
+                          <KeepTogether>true</KeepTogether>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                        <ColSpan>2</ColSpan>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell />
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Details">
+                    <PageBreak>
+                      <BreakLocation>Between</BreakLocation>
+                    </PageBreak>
+                  </Group>
+                  <TablixMembers>
+                    <TablixMember />
+                    <TablixMember />
+                  </TablixMembers>
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>DataSet1</DataSetName>
+            <Height>4.33882in</Height>
+            <Width>10.53465in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>4.85491in</Height>
+        <Style />
+      </Body>
+      <Width>12.57673in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>59cc0e69-c437-4a0b-a370-4942c25b5e88</rd:ReportID>
+</Report>
